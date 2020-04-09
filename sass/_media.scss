@@ -1,4 +1,9 @@
 @media (max-width: 1366px) {
+    .button {
+        &_buy {
+            margin-right: 20px;
+        }
+    }
     .promo {
         &__content {
             padding-left: 45px;
@@ -19,6 +24,9 @@
         &__short-info {
             font-size: 15px;
         }
+        &__structure {
+            font-size: 14px;
+        }
     }
 }
 
@@ -30,10 +38,17 @@
         &__info {
             flex-direction: column-reverse;
             align-items: start;
+            &_rest {
+                flex-direction: row;
+                align-items: center;
+            }
         }
         &__rating {
             display: none;
             &_md {
+                display: block;
+            }
+            &_rest {
                 display: block;
             }
         }
@@ -60,13 +75,6 @@
             flex: .8;
         }
     }
-    .header {
-        .input_address {
-            order: 3;
-            margin-top: 15px;
-            flex: 1;
-        }
-    }
     .promo {
         &__content {
             background-position: right -100px bottom -50px;
@@ -89,11 +97,18 @@
     }
 }
 
-@media(max-width: 767px) {
+@media(max-width: 770px) {
     .input {
         &_search {
            flex-basis: 100%;
            margin-top: 15px;
+        }
+    }
+    .header {
+        .input_address {
+            order: 3;
+            margin-top: 15px;
+            flex: 1;
         }
     }
     .promo {
@@ -199,6 +214,13 @@
 
     .restaurants {
         margin-top: 20px;
+        padding-bottom: 50px;
+        &__heading {
+            &_rest {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
     }
 
     .card {
@@ -214,6 +236,12 @@
         &__rating {
             &_md {
                 bottom: 40%;
+            }
+        }
+        &__short-info {
+            &_rest {
+                font-size: 12px;
+                margin-top: 10px;
             }
         }
     }

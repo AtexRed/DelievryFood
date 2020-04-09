@@ -101,6 +101,26 @@ input::-webkit-input-placeholder {
             box-shadow: 0 0 6px #595959;
         }
     }
+    &_buy {
+        border: none;
+        border-radius: 2px;
+        background-color: #1890FF;
+        width: 124px;
+        line-height: 1;
+        margin-right: 59px;
+        &:active {
+            box-shadow: 0 0 6px #1890FF;
+        }
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+    &__text {
+        &_buy {
+            margin-right: 5px;
+        }
+    }
 }
 
 .input {
@@ -123,13 +143,14 @@ input::-webkit-input-placeholder {
         box-shadow: 0 0 10px rgba(0,0,0, .5);
     }
     &_address {
-        flex: .6;
+        flex: .7;
+        flex-shrink: 0;
         background: url('../icons/home_icon.svg');
         background-repeat: no-repeat;
         background-position: left 11px center; 
     }
     &_search {
-        flex: 0.5;
+        flex: 0.3;
         padding: 3px 0 3px 38px;
         background: url('../icons/search_icon.svg');
         background-repeat: no-repeat;
@@ -141,8 +162,11 @@ input::-webkit-input-placeholder {
 .title {
     font-weight: 700;
     font-size: 36px;
-    line-height: 42px;
+    line-height: 1;
     color: #000000;
+    &_rest {
+        margin-right: 3%;
+    }
 }
 
 .cards {
@@ -157,7 +181,7 @@ input::-webkit-input-placeholder {
     border-radius: 7px;
     box-shadow: 0px 4px 12px rgba(148, 100, 100, 0.2);
     position: relative;
-    img {
+    & > img {
         width: 100%;
         border-radius: 7px 7px 0 0;
     }
@@ -181,6 +205,9 @@ input::-webkit-input-placeholder {
         font-size: 24px;
         line-height: 32px;
         color: #000000;
+        &_reg {
+            font-weight: 400;
+        }
     }
     &__tag {
         display: flex;
@@ -208,6 +235,10 @@ input::-webkit-input-placeholder {
         justify-content: flex-start;
         width: 100%;
         margin-top: 10px;
+        &_rest {
+            margin-top: 0;
+            flex: 1;
+        }
     }
     &__rating {
         font-weight: 700;
@@ -222,7 +253,7 @@ input::-webkit-input-placeholder {
             margin-right: 7px;
             font-size: 14px;
             position: relative;
-            bottom: 2px;
+            bottom: 1px;
         }
         &_md {
             position: absolute;
@@ -235,6 +266,10 @@ input::-webkit-input-placeholder {
             background-color: rgba(0,0,0,.5);
             margin-right: 0;
             padding-top: 1px;
+        }
+        &_rest {
+            position: relative;
+            top: 2px;
         }
     }
     &__short-info {
@@ -256,6 +291,24 @@ input::-webkit-input-placeholder {
             margin-left: 10px;
             transform: translateY(-3px);
         }
+    }
+    &__structure {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #8C8C8C;
+        margin-top: 10px;
+    }
+    &__buy {
+        display: flex;
+        margin-top: 28px;
+        align-items: center;
+    }
+    &__product-price {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1;
+        color: #000000;
     }
 }
 
@@ -321,6 +374,11 @@ input::-webkit-input-placeholder {
     &__heading {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        &_rest {
+            justify-content: flex-start;
+        }
     }
 }
 
