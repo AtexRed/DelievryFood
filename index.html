@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header__content">
-                <a class="logo" href="#">
+                <a class="logo animated fadeInLeft" href="#">
                     <span class="icon-logo"></span>
                     <div class="logo__name">Delivery<br> Food</div>
                 </a>
@@ -25,7 +26,7 @@
                         <span class="icon-user_icon"></span>
                         <div class="button__text">Войти</div>
                     </button>
-                    <button class="button button_basket">
+                    <button class="button button_basket" id="cart-button">
                         <span class="icon-basket_icon"></span>
                         <div class="button__text">Корзина</div>
                     </button>
@@ -34,7 +35,7 @@
         </div>
     </header>
     <div class="content">
-        <section class="promo">
+        <section class="promo animated fadeInRight delay-1s">
             <div class="container">
                 <div class="promo__content">
                     <div class="promo__wrapper">
@@ -56,7 +57,7 @@
                     </div>
                     
                     <div class="cards">
-                        <a class="card" href="restaurant.html">
+                        <a class="card wow fadeInUp" href="#">
                             <div class="card__rating card__rating_md">
                                 <span class="icon-star_icon"></span>
                                 4.5
@@ -84,12 +85,12 @@
                         </a>
                         <!-- /.card -->
 
-                        <div class="card">
+                        <a class="card" href="restaurant-tanuki.html">
                             <div class="card__rating card__rating_md">
                                 <span class="icon-star_icon"></span>
-                                4.5
+                                4.8
                             </div>
-                            <div class="card__tag card__tag_md">55 мин</div>
+                            <div class="card__tag card__tag_md">50 мин</div>
                             <img src="img/restaurants/2.jpg" alt="" class="card__img">
                             <div class="card__wrapper">
                                 <div class="card__heading">
@@ -109,14 +110,14 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <div class="card">
                             <div class="card__rating card__rating_md">
                                 <span class="icon-star_icon"></span>
-                                4.5
+                                4.7
                             </div>
-                            <div class="card__tag card__tag_md">55 мин</div>
+                            <div class="card__tag card__tag_md">40 мин</div>
                             <img src="img/restaurants/3.jpg" alt="" class="card__img">
                             <div class="card__wrapper">
                                 <div class="card__heading">
@@ -141,9 +142,9 @@
                         <div class="card card_mt">
                             <div class="card__rating card__rating_md">
                                 <span class="icon-star_icon"></span>
-                                4.5
+                                4.3
                             </div>
-                            <div class="card__tag card__tag_md">55 мин</div>
+                            <div class="card__tag card__tag_md">60 мин</div>
                             <img src="img/restaurants/4.jpg" alt="" class="card__img">
                             <div class="card__wrapper">
                                 <div class="card__heading">
@@ -168,9 +169,9 @@
                         <div class="card card_mt">
                             <div class="card__rating card__rating_md">
                                 <span class="icon-star_icon"></span>
-                                4.5
+                                4.4
                             </div>
-                            <div class="card__tag card__tag_md">55 мин</div>
+                            <div class="card__tag card__tag_md">45 мин</div>
                             <img src="img/restaurants/5.jpg" alt="" class="card__img">
                             <div class="card__wrapper">
                                 <div class="card__heading">
@@ -192,12 +193,12 @@
                             </div>
                         </div>
 
-                        <div class="card card_mt">
+                        <div class="card card_mt wow fadeInRight">
                             <div class="card__rating card__rating_md">
                                 <span class="icon-star_icon"></span>
-                                4.5
+                                4.6
                             </div>
-                            <div class="card__tag card__tag_md">55 мин</div>
+                            <div class="card__tag card__tag_md">30 мин</div>
                             <img src="img/restaurants/6.jpg" alt="" class="card__img">
                             <div class="card__wrapper">
                                 <div class="card__heading">
@@ -251,18 +252,59 @@
                 </div>
 
                 <div class="socials">
-                    <a class="socials__item" href="">
+                    <a class="socials__item wow bounce" href="https://www.instagram.com/" target="_blank">
                         <img src="icons/instagram_icon.svg" alt="">
                     </a>
-                    <a class="socials__item" href="">
+                    <a class="socials__item wow bounce delay-1s" href="https://ru-ru.facebook.com/" target="_blank">
                         <img src="icons/facebook_icon.svg" alt="">
                     </a>
-                    <a class="socials__item" href="">
+                    <a class="socials__item wow bounce delay-2s" href="https://vk.com/" target="_blank">
                         <img src="icons/vk_icon.svg" alt="">
                     </a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <div class="modal">
+        <div class="modal__dialog">
+            <div class="modal__header">
+                <h3 class="modal__title">Корзина</h3>
+                <button class="close">&times;</button>
+            </div>
+            <div class="modal__content">
+                <div class="food__row">
+                    <span class="food__name">Ролл угорь стандарт</span>
+                    <strong class="food__price">250 ₽</strong>
+                    <div class="food__counter">
+                        <button class="food__counter-button">-</button>
+                        <span class="food__counter-count">1</span>
+                        <button class="food__counter-button">+</button>
+                    </div>
+                </div>
+                <div class="food__row">
+                    <span class="food__name">Ролл угорь стандарт</span>
+                    <strong class="food__price">250 ₽</strong>
+                    <div class="food__counter">
+                        <button class="food__counter-button">-</button>
+                        <span class="food__counter-count">1</span>
+                        <button class="food__counter-button">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__footer">
+                <span class="modal__footer-price">1250 ₽</span>
+                <div class="modal__footer-buttons">
+                    <button class="button button_issue">
+                        <span class="button__text">Оформить заказ</span>
+                    </button>
+                    <button class="button button_cancel">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
