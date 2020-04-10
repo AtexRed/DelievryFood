@@ -98,6 +98,11 @@
 }
 
 @media(max-width: 768px) {
+    .button {
+        &_issue {
+            margin-right: 20px;
+        }
+    }
     .input {
         &_search {
            flex-basis: 100%;
@@ -172,6 +177,9 @@
             margin-top: 20px;
         }
     }
+    .modal__title {
+        font-size: 28px;
+    }
 }
 
 @media(max-width: 577px) {
@@ -187,6 +195,19 @@
         }
         &__text {
             display: none;
+        }
+        &_issue {
+            width: 65%;
+            height: 40px;
+            text-align: center;
+            margin-right: 10px;
+            .button__text {
+                display: block;
+            }
+        }
+        &_cancel {
+            width: 35%;
+            height: 40px;
         }
     }
     .container {
@@ -270,6 +291,47 @@
         &__link {
             display: block;
             width: 100%;
+        }
+    }
+    .modal {
+        &__title {
+            font-size: 24px;
+        }
+        &__footer {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 15px;
+            &-buttons {
+                margin-top: 10px;
+                width: 100%;
+            }
+            &-price {
+                font-size: 16px;
+                width: 100%;
+            }
+        }
+    }
+    .food {
+        &__name {
+            font-size: 12px;
+        }
+        &__price {
+            font-size: 14px;
+            margin-right: 7px;
+            margin-left: 10px;
+        }
+        &__counter {
+            position: relative;
+            top: 5px;
+            &-button {
+                width: 20px;
+                height: 20px;
+                font-size: 10px;
+            }
+            &-count {
+                font-size: 12px;
+            }
         }
     }
 }
